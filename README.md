@@ -30,20 +30,40 @@ tasks.json.
 - arm-none-eabi.lib
 
 Here is an example of tasks.json for GNU make. 
-```json
+```javascript
 {
   "version": "2.0.0",
   "tasks": [
     {
       "label": "build firmware",
       "type": "shell",
-      "command": "make",
+      "command": "make test",
       "options": {
         "env": {
-          "PATH": "${env:PATH}:${config:arm-none-eabi.bin}",
           "INCLUDE": "${config:arm-none-eabi.include}",
           "LIB": "${config:arm-none-eabi.lib}",
         }
+      },
+      "osx": {
+        "options": {
+          "env": {
+            "PATH": "${config:arm-none-eabi.bin}:${env:PATH}",
+          }
+        },
+      },
+      "linux": {
+        "options": {
+          "env": {
+            "PATH": "${config:arm-none-eabi.bin}:${env:PATH}",
+          }
+        },
+      },
+      "windows": {
+        "options": {
+          "env": {
+            "PATH": "${config:arm-none-eabi.bin};${env:PATH}",
+          }
+        },
       },
       "group": {
         "kind": "build",
@@ -54,8 +74,20 @@ Here is an example of tasks.json for GNU make.
   ]
 }
 ```
+With the following makefile:
+```makefile
+.PHONY: test
+
+test:
+	@echo $(PATH)
+	@echo $(INCLUDE)
+	@echo $(LIB)
+```
 
 ## Release Notes
+
+### Version 0.0.5
+Operating system specific PATH environment variable. 
 
 ### Version 0.0.3
 Version 7-2017-q4-major for Linux (64-bit)

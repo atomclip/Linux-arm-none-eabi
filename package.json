@@ -3,7 +3,7 @@
   "displayName": "linux-arm-none-eabi",
   "description": "GNU Arm embedded toolchain for Linux (64-bit)",
   "icon": "images/gcc-linux-128x128.png",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "publisher": "atomclip",
   "engines": {
     "vscode": "^1.24.0"
@@ -21,7 +21,7 @@
             "string",
             "null"
           ],
-          "default": "${env:HOME}/.vscode/extensions/atomclip.linux-arm-none-eabi-0.0.3/bin",
+          "default": "${env:HOME}/.vscode/extensions/atomclip.linux-arm-none-eabi-0.0.5/bin",
           "description": "The path to the GNU toolchain."
         },
         "arm-none-eabi.include": {
@@ -29,7 +29,7 @@
             "string",
             "null"
           ],
-          "default": "${env:HOME}/.vscode/extensions/atomclip.linux-arm-none-eabi-0.0.3/arm-none-eabi/include",
+          "default": "${env:HOME}/.vscode/extensions/atomclip.linux-arm-none-eabi-0.0.5/arm-none-eabi/include",
           "description": "The path to the GCC header files."
         },
         "arm-none-eabi.lib": {
@@ -37,7 +37,7 @@
             "string",
             "null"
           ],
-          "default": "${env:HOME}/.vscode/extensions/atomclip.linux-arm-none-eabi-0.0.3/lib",
+          "default": "${env:HOME}/.vscode/extensions/atomclip.linux-arm-none-eabi-0.0.5/lib",
           "description": "The path to the GCC library files."
         }
       }
