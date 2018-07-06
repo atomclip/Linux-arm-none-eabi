@@ -1,7 +1,7 @@
 #!/bin/sh
 echo "Create symlinks for GNU Arm embedded toolchain for Linux"
 
-VERSION=0.0.6
+VERSION=0.0.8
 TOOLCHAIN=~/.vscode/extensions/atomclip.linux-arm-none-eabi-${VERSION}/bin
 CROSS=arm-none-eabi-
 
