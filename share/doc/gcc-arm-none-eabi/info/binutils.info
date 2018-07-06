@@ -1,7 +1,7 @@
 This is binutils.info, produced by makeinfo version 5.2 from
 binutils.texi.
 
-Copyright (C) 1991-2017 Free Software Foundation, Inc.
+Copyright (C) 1991-2018 Free Software Foundation, Inc.
 
    Permission is granted to copy, distribute and/or modify this document
 under the terms of the GNU Free Documentation License, Version 1.3 or
@@ -43,7 +43,7 @@ Introduction
 ************
 
 This brief manual contains documentation for the GNU binary utilities
-(GNU Tools for Arm Embedded Processors 7-2017-q4-major) version 2.29.51:
+(GNU Tools for Arm Embedded Processors 7-2018-q2-update) version 2.30.0:
 
    This document is distributed under the terms of the GNU Free
 Documentation License version 1.3.  A copy of the license is included in
@@ -889,6 +889,7 @@ File: binutils.info,  Node: objcopy,  Next: objdump,  Prev: nm,  Up: Top
              [-B BFDARCH|--binary-architecture=BFDARCH]
              [-S|--strip-all]
              [-g|--strip-debug]
+             [--strip-unneeded]
              [-K SYMBOLNAME|--keep-symbol=SYMBOLNAME]
              [-N SYMBOLNAME|--strip-symbol=SYMBOLNAME]
              [--strip-unneeded-symbol=SYMBOLNAME]
@@ -1378,7 +1379,7 @@ the '--reverse-bytes' option.)
 '--rename-section OLDNAME=NEWNAME[,FLAGS]'
      Rename a section from OLDNAME to NEWNAME, optionally changing the
      section's flags to FLAGS in the process.  This has the advantage
-     over usng a linker script to perform the rename in that the output
+     over using a linker script to perform the rename in that the output
      stays as an object file and does not become a linked executable.
 
      This option is particularly helpful when the input format is
@@ -5287,8 +5288,8 @@ Binutils Index
 
 * -enable-deterministic-archives:        ar cmdline.          (line 143)
 * -enable-deterministic-archives <1>:    ar cmdline.          (line 216)
-* -enable-deterministic-archives <2>:    objcopy.             (line 342)
-* -enable-deterministic-archives <3>:    objcopy.             (line 352)
+* -enable-deterministic-archives <2>:    objcopy.             (line 343)
+* -enable-deterministic-archives <3>:    objcopy.             (line 353)
 * -enable-deterministic-archives <4>:    ranlib.              (line  32)
 * -enable-deterministic-archives <5>:    ranlib.              (line  44)
 * -enable-deterministic-archives <6>:    strip.               (line 149)
@@ -5312,11 +5313,11 @@ Binutils Index
 * bugs:                                  Reporting Bugs.      (line   6)
 * bugs, reporting:                       Bug Reporting.       (line   6)
 * c++filt:                               c++filt.             (line   6)
-* changing object addresses:             objcopy.             (line 387)
-* changing section address:              objcopy.             (line 397)
-* changing section LMA:                  objcopy.             (line 406)
-* changing section VMA:                  objcopy.             (line 419)
-* changing start address:                objcopy.             (line 382)
+* changing object addresses:             objcopy.             (line 388)
+* changing section address:              objcopy.             (line 398)
+* changing section LMA:                  objcopy.             (line 407)
+* changing section VMA:                  objcopy.             (line 420)
+* changing start address:                objcopy.             (line 383)
 * collections of files:                  ar.                  (line   6)
 * compatibility, 'ar':                   ar.                  (line  60)
 * contents of archive:                   ar cmdline.          (line  97)
@@ -5334,8 +5335,8 @@ Binutils Index
 * demangling in objdump <1>:             addr2line.           (line  84)
 * deterministic archives:                ar cmdline.          (line 143)
 * deterministic archives <1>:            ar cmdline.          (line 216)
-* deterministic archives <2>:            objcopy.             (line 342)
-* deterministic archives <3>:            objcopy.             (line 352)
+* deterministic archives <2>:            objcopy.             (line 343)
+* deterministic archives <3>:            objcopy.             (line 353)
 * deterministic archives <4>:            ranlib.              (line  32)
 * deterministic archives <5>:            ranlib.              (line  44)
 * deterministic archives <6>:            strip.               (line 149)
@@ -5467,29 +5468,29 @@ Node: ar cmdline6781
 Node: ar scripts18179
 Node: nm23865
 Node: objcopy35417
-Node: objdump74348
-Node: ranlib103636
-Node: size105235
-Node: strings108211
-Node: strip112583
-Node: c++filt121889
-Ref: c++filt-Footnote-1126703
-Node: addr2line126809
-Node: nlmconv131338
-Node: windmc133917
-Node: windres137574
-Node: dlltool143933
-Node: def file format156930
-Node: readelf159460
-Node: elfedit170974
-Node: Common Options173226
-Node: Selecting the Target System174260
-Node: Target Selection175192
-Node: Architecture Selection177173
-Node: Reporting Bugs178001
-Node: Bug Criteria178780
-Node: Bug Reporting179333
-Node: GNU Free Documentation License186203
-Node: Binutils Index211363
+Node: objdump74381
+Node: ranlib103669
+Node: size105268
+Node: strings108244
+Node: strip112616
+Node: c++filt121922
+Ref: c++filt-Footnote-1126736
+Node: addr2line126842
+Node: nlmconv131371
+Node: windmc133950
+Node: windres137607
+Node: dlltool143966
+Node: def file format156963
+Node: readelf159493
+Node: elfedit171007
+Node: Common Options173259
+Node: Selecting the Target System174293
+Node: Target Selection175225
+Node: Architecture Selection177206
+Node: Reporting Bugs178034
+Node: Bug Criteria178813
+Node: Bug Reporting179366
+Node: GNU Free Documentation License186236
+Node: Binutils Index211396
 
 End Tag Table

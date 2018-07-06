@@ -1,3 +1,7 @@
+### Version 0.0.6
+Replaced toolchain with Version 7-2018-q2-update for Linux.
+Added a script symlink.sh to create symlinks to toolchain.
+
 ### Version 0.0.5
 The path separator punctiantion is a *colon :* in macOS and Linux and a 
 *semicolon ;* in Windows. To handle these operating system specific differences 

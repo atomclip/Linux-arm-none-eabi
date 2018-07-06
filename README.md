@@ -86,6 +86,10 @@ test:
 
 ## Release Notes
 
+### Version 0.0.6
+Version 7-2018-q2-update for Linux
+Added ./symlink.sh to create symlinks in /usr/local/bin.
+
 ### Version 0.0.5
 Operating system specific PATH environment variable. 
 

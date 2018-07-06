@@ -133,7 +133,7 @@
 .\" ========================================================================
 .\"
 .IX Title "LD 1"
-.TH LD 1 "2017-11-30" "binutils-2.29.51" "GNU Development Tools"
+.TH LD 1 "2018-06-22" "binutils-2.30.0" "GNU Development Tools"
 .\" For nroff, turn off justification.  Always turn off hyphenation; it makes
 .\" way too many mistakes in technical documents.
 .if n .ad l
@@ -1015,8 +1015,9 @@ layout will be optimized to minimize memory pages if the system is
 using pages of this size.
 .IP "\fBdefs\fR" 4
 .IX Item "defs"
-Disallows undefined symbols in object files.  Undefined symbols in
-shared libraries are still allowed.
+Report unresolved symbol references from regular object files.  This
+is done even if the linker is creating a non-symbolic shared library.
+This option is the inverse of \fB\-z undefs\fR.
 .IP "\fBdynamic-undefined-weak\fR" 4
 .IX Item "dynamic-undefined-weak"
 .PD 0
@@ -1137,6 +1138,16 @@ specifies a memory segment that should be made read-only after
 relocation, if supported.  Specifying \fBcommon-page-size\fR smaller
 than the system page size will render this protection ineffective.
 Don't create an \s-1ELF \s0\f(CW\*(C`PT_GNU_RELRO\*(C'\fR segment if \fBnorelro\fR.
+.IP "\fBseparate-code\fR" 4
+.IX Item "separate-code"
+.PD 0
+.IP "\fBnoseparate-code\fR" 4
+.IX Item "noseparate-code"
+.PD
+Create separate code \f(CW\*(C`PT_LOAD\*(C'\fR segment header in the object.  This
+specifies a memory segment that should contain only instructions and must
+be in wholly disjoint pages from any other data.  Don't create separate
+code \f(CW\*(C`PT_LOAD\*(C'\fR segment if \fBnoseparate-code\fR is used.
 .IP "\fBshstk\fR" 4
 .IX Item "shstk"
 Generate \s-1GNU_PROPERTY_X86_FEATURE_1_SHSTK\s0 in .note.gnu.property section
@@ -1158,6 +1169,11 @@ Specifying zero will override any default non-zero sized
 Report an error if \s-1DT_TEXTREL\s0 is set, i.e., if the binary has dynamic
 relocations in read-only sections.  Don't report an error if
 \&\fBnotext\fR or \fBtextoff\fR.
+.IP "\fBundefs\fR" 4
+.IX Item "undefs"
+Do not report unresolved symbol references from regular object files,
+either when creating an executable, or when creating a shared library.
+This option is the inverse of \fB\-z defs\fR.
 .RE
 .RS 4
 .Sp
@@ -1547,6 +1563,8 @@ is done even if the linker is creating a non-symbolic shared library.
 The switch \fB\-\-[no\-]allow\-shlib\-undefined\fR controls the
 behaviour for reporting unresolved references found in shared
 libraries being linked in.
+.Sp
+The effects of this option can be reverted by using \f(CW\*(C`\-z undefs\*(C'\fR.
 .IP "\fB\-\-allow\-multiple\-definition\fR" 4
 .IX Item "--allow-multiple-definition"
 .PD 0
@@ -2820,7 +2838,7 @@ the Info entries for \fIbinutils\fR and
 \&\fIld\fR.
 .SH "COPYRIGHT"
 .IX Header "COPYRIGHT"
-Copyright (c) 1991\-2017 Free Software Foundation, Inc.
+Copyright (c) 1991\-2018 Free Software Foundation, Inc.
 .PP
 Permission is granted to copy, distribute and/or modify this document
 under the terms of the \s-1GNU\s0 Free Documentation License, Version 1.3
