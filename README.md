@@ -88,8 +88,8 @@ test:
 
 
 ### Version 0.1.0
-Version 7-2018-q2-update for Linux
-Addeds script to create symlinks in /usr/local/bin.
+Version 7-2018-q2-update for Linux.
+Added script to create symlinks in /usr/local/bin.
 
 ### Version 0.0.5
 Operating system specific PATH environment variable. 
