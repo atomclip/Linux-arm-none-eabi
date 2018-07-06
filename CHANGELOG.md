@@ -1,3 +1,7 @@
+### Version 0.0.7
+The script symlink.sh does not run during installation. You have to run the 
+script as root. Removed the symlink.sh during installation.
+
 ### Version 0.0.6
 Replaced toolchain with Version 7-2018-q2-update for Linux.
 Added a script symlink.sh to create symlinks to toolchain.

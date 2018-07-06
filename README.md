@@ -86,6 +86,9 @@ test:
 
 ## Release Notes
 
+### Version 0.0.7
+See CHANGELOG.md
+
 ### Version 0.0.6
 Version 7-2018-q2-update for Linux
 Added ./symlink.sh to create symlinks in /usr/local/bin.
