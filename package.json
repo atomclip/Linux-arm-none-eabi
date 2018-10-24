@@ -3,7 +3,7 @@
   "displayName": "linux-arm-none-eabi",
   "description": "GNU Arm embedded toolchain for Linux (64-bit)",
   "icon": "images/moved.png",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "preview": true,
   "publisher": "atomclip",
   "engines": {
